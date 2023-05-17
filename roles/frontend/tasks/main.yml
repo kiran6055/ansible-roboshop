@@ -62,6 +62,10 @@
     nexus_password: "{{ lookup('aws_ssm', 'nexus.password', region='us-east-1' ) }}"
 
 
+- name: Copy Nginx Config
+  ansible.builtin.template:
+    src: nginx.conf
+    dest: /etc/nginx/nginx.conf
 
 - name: Copying file roboshop config file
   ansible.builtin.template:
