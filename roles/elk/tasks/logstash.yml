@@ -1,9 +1,9 @@
-- name: Update Logstash conf
+- name: Update Logstgash Config
   ansible.builtin.template:
     src: logstash.conf
     dest: /etc/logstash/conf.d/logstash.conf
 
-- name : restart logstashconf
+- name: Restart Logtstash
   ansible.builtin.systemd:
     name: logstash
     state: restarted
