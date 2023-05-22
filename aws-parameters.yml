@@ -98,7 +98,7 @@
         - { name: "ses.user", value: "AKIARICXTIURAJ52LUU6" }
         - { name: "ses.pass", value: "BDXleegCYGv1FrvC7VIRsjCvdhIAjCZqyUGStpU3JwG1" }
         - { name: "prod.ssh.USER", value: "centos" }
-        - { name: "prod.ssh.PASS", value: "prodOps321" }
+        - { name: "prod.ssh.PASS", value: "DevOps321" }
 
 
 
