@@ -44,7 +44,7 @@
   ansible.builtin.yum:
     name:
       - rabbitmq-server
-      - erlang
+#      - erlang (the new rabbit mq version doesnot require erlang to install
     state: installed
 
 - name: start rabbitmq service
