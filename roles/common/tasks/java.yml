@@ -20,18 +20,28 @@
 #LOAD_SCHEMA
 
 
-- name: install maven
+#- name: install maven
+#  ansible.builtin.yum:
+#    name: maven
+#    state: installed
+
+#maven is not required bcz the artificat is sent to nexus, it will donload from maven this is after artifact is move to nexus if not comment java 11
+
+#java 11 is intalled at the time load test to get rid of error in shipping which shows the error java heapspace error
+
+- name: install java 11
   ansible.builtin.yum:
-    name: maven
+    name: java-11-openjdk
     state: installed
+
 
 - name: app-prereq
   ansible.builtin.include_tasks: "app-prereq.yml"
 
-- name: Maven Build
-  ansible.builtin.shell: mvn clean package ; mv target/{{component}}-1.0.jar {{component}}.jar
-  args:
-    chdir: /app
+#- name: Maven Build
+#  ansible.builtin.shell: mvn clean package ; mv target/{{component}}-1.0.jar {{component}}.jar
+#  args:
+#    chdir: /app
 
 - name: systemd setup
   ansible.builtin.include_tasks: "systemd.yml"
