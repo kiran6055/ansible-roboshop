@@ -18,7 +18,8 @@
 
 - name: print out
   debug:
-    msg: "{{out.databses.cities }}"
+    msg: "cities exits"
+  when: "'cities' in out.databases"
 
 - name: loading MySQL Schema
   community.mysql.mysql_db:
