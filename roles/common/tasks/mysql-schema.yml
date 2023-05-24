@@ -16,10 +16,11 @@
     login_password: "{{ lookup('aws_ssm', '{{env}}.rds.DB_ADMIN_PASS', region='us-east-1' ) }}"
   register: out
 
-- name: print out
-  debug:
-    msg: "cities exits"
-  when: "'cities' in out.databases"
+#this is used to give print messages of the database with when condition
+#- name: print out
+#  debug:
+#    msg: "cities exits"
+#  when: "'cities' in out.databases"
 
 - name: loading MySQL Schema
   community.mysql.mysql_db:
@@ -29,3 +30,4 @@
     login_host: "{{ lookup('aws_ssm', '{{env}}.rds.Endpoint', region='us-east-1' ) }}"
     login_user: "{{ lookup('aws_ssm', '{{env}}.rds.DB_ADMIN_USER', region='us-east-1' ) }}"
     login_password: "{{ lookup('aws_ssm', '{{env}}.rds.DB_ADMIN_PASS', region='us-east-1' ) }}"
+  when: "'cities' not in out.databases"
