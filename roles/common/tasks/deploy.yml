@@ -3,7 +3,7 @@
     name: "{{component}}"
     state: stopped
 
-- name: App -prereq will be given here it wil start all the apporach node java python based on componenet and will do rest of the things
+- name: App -prereq will be given here
   ansible.builtin.include_tasks: "app-prereq.yml"
 
 - name: start the application

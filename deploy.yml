@@ -5,4 +5,5 @@
     - name: Import deployment file from common tasks
       ansible.builtin.import_role:
         name: common
+        tasks_from: deploy
 
