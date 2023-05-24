@@ -1,0 +1,12 @@
+- name: stop the application
+  ansible.builtin.systemd:
+    name: "{{app_service_name}}"
+    state: stopped
+
+- name: App -prereq will be given here it wil start all the apporach node java python based on componenet and will do rest of the things
+  ansible.builtin.include_tasks: "app-prereq.yml"
+
+- name: start the application
+  ansible.builtin.systemd:
+    name: "{{app_service_name}}"
+    state: started
