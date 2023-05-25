@@ -99,6 +99,13 @@
         - { name: "ses.pass", value: "BDXleegCYGv1FrvC7VIRsjCvdhIAjCZqyUGStpU3JwG1" }
         - { name: "prod.ssh.USER", value: "centos" }
         - { name: "prod.ssh.PASS", value: "DevOps321" }
+        - { name: "prod.cart.APP_VERSION", value: "1.0.0" }
+        - { name: "prod.catalogue.APP_VERSION", value: "1.0.3" }
+        - { name: "prod.user.APP_VERSION", value: "1.0.3" }
+        - { name: "prod.shipping.APP_VERSION", value: "1.0.0" }
+        - { name: "prod.payment.APP_VERSION", value: "1.0.1" }
+        - { name: "prod.dispatch.APP_VERSION", value: "1.0.1" }
+        - { name: "prod.frontend.APP_VERSION", value: "1.0.1" }
 
 
 
