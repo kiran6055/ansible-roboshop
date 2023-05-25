@@ -1,5 +1,5 @@
 component: frontend
-app_version: 1.0.1
+#app_version: 1.0.1 this is bcz we are not using frontend to download from common so we are giving app-version with lookup
 service_name: nginx
 #(this is for prometheus service for alert configuration of particular service this variable is given tha main varaible which is given in coomom folder template alert.yml)
 monitor_ssh_service: true
@@ -7,3 +7,4 @@ filebeat: true
 app_log_file: /var/log/nginx/access.log
 exclude_lines: true
 exclude_words: ["/api/ratings"]
+app_version: "{{ lookup('aws_ssm', '{{env}}.{{component}}.APP_VERSION', region='us-east-1' ) }}"
