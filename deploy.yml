@@ -1,4 +1,4 @@
-- name: Roboshop Applicartion Deployment
+- name: Roboshop Application Deployment
   hosts: all
   become: yes
   serial: 1 # this is (serial) used to deploy 1 server at a time here we have given 2 servers for shipping if we take out serial it will deploy 2 servers at same time (if number of servers is 10 also same method)
