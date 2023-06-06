@@ -78,6 +78,10 @@
         - {name: "prod.payment.AMQP_USER", value: "roboshop" }
         - {name: "prod.shipping.CART_ENDPOINT", value: "cart-prod.awsctr.online:80" }
         - {name: "prod.shipping.DB_HOST", value: "mysql-prod.awsctr.online" }
+        - { name: "prod.shipping.CART_ENDPOINT", value: "roboshop" }
+        - { name: "prod.shipping.DB_HOST", value: "prod-rds.cluster-ccs4h9brfzmd.us-east-1.rds.amazonaws.com" }
+        - { name: "prod.shipping.DB_USER", value: "admin1" }
+        - { name: "prod.shipping.DB_PASS", value: "RoboShop123" }
         - {name: "prod.user.MONGO", value: "true" }
         - {name: "prod.user.MONGO_URL", value: "mongodb://admin1:RoboShop123@prod-docdb-cluster.cluster-ccs4h9brfzmd.us-east-1.docdb.amazonaws.com:27017/users?tls=true&replicaSet=rs0&readPreference=secondaryPreferred&retryWrites=false" }
         - {name: "prod.user.REDIS_HOST", value: "prod-elasticache-cluster.lo8p0z.0001.use1.cache.amazonaws.com:6379 " }
