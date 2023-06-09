@@ -69,16 +69,16 @@
         - {name: "prod.frontend.USER_URL", value: "http://user-prod.awsctr.online:80/" }
         - {name: "prod.frontend.PAYMENT_URL", value: "http://payment-prod.awsctr.online:80/" }
         - {name: "prod.frontend.SHIPPING_URL", value: "http://shipping-prod.awsctr.online:80/" }
-        - {name: "prod.payment.CART_HOST", value: "cart-prod.awsctr.online" }
-        - {name: "prod.payment.USER_HOST", value: "user-prod.awsctr.online" }
-        - {name: "prod.payment.CART_PORT", value: "80" }
-        - {name: "prod.payment.USER_PORT", value: "80" }
+        - {name: "prod.payment.CART_HOST", value: "cart-roboshop" }
+        - {name: "prod.payment.USER_HOST", value: "user-roboshop" }
+        - {name: "prod.payment.CART_PORT", value: "8080" }
+        - {name: "prod.payment.USER_PORT", value: "8080" }
         - {name: "prod.payment.AMQP_HOST", value: "rabbitmq-prod.awsctr.online" }
         - {name: "prod.dispatch.AMQP_HOST", value: "rabbitmq-prod.awsctr.online" }
         - {name: "prod.payment.AMQP_USER", value: "roboshop" }
-        - {name: "prod.shipping.CART_ENDPOINT", value: "cart-prod.awsctr.online:80" }
+        - {name: "prod.shipping.CART_ENDPOINT", value: "cart-roboshop:8080" }
         - {name: "prod.shipping.DB_HOST", value: "mysql-prod.awsctr.online" }
-        - { name: "prod.shipping.CART_ENDPOINT", value: "roboshop" }
+        - { name: "prod.shipping.CATALOGUE_ENDPOINT", value: "catalogue-roboshop:8080" }
         - { name: "prod.shipping.DB_HOST", value: "prod-rds.cluster-ccs4h9brfzmd.us-east-1.rds.amazonaws.com" }
         - { name: "prod.shipping.DB_USER", value: "admin1" }
         - { name: "prod.shipping.DB_PASS", value: "RoboShop123" }
